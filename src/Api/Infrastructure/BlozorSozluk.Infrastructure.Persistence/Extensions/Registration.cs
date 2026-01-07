@@ -1,4 +1,6 @@
-﻿using BlozorSozluk.Infrastructure.Persistence.Context;
+﻿using BlozorSozluk.Api.Application.Interfaces.Repositories;
+using BlozorSozluk.Infrastructure.Persistence.Context;
+using BlozorSozluk.Infrastructure.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -22,6 +24,11 @@ namespace BlozorSozluk.Infrastructure.Persistence.Extensions
             //* Bir kere calistirdigimiz icin bir daha calistirmaya gerek yok
             // var seedData = new SeedData();
             // seedData.SeedAsync(configuration).GetAwaiter().GetResult();
+
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IEntryRepository, EntryRepository>();
+            services.AddScoped<IEmailConfirmationRepository, EmailConfirmationRepository>();
+            services.AddScoped<IEntryCommentRepository, EntryCommentRepository>();
 
             return services;
 

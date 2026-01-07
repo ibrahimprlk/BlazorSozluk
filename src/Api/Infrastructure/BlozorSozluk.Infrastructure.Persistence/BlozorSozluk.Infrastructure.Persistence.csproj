@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Core\BlozorSozluk.Api.Application\BlozorSozluk.Api.Application.csproj" />
     <ProjectReference Include="..\..\Core\BlozorSozluk.Api.Domain\BlozorSozluk.Api.Domain.csproj" />
   </ItemGroup>
 
