@@ -8,6 +8,10 @@ namespace BlozorSozluk.Infrastructure.Persistence.Context
     {
         public const string DEFAULT_SCHEMA = "dbo";
 
+        public BlazorSozlukContext()
+        {
+            
+        }
         public BlazorSozlukContext(DbContextOptions options) : base(options)
         {
         }
@@ -24,7 +28,17 @@ namespace BlozorSozluk.Infrastructure.Persistence.Context
         {
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());  
         }
-
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured) // Parametresiz constructor olusturuldugunda burasi false olacagi icin icerisindeki islemler gerceklesecek
+            {
+                var connStr = "Server=(localdb)\\MSSQLLocalDB;Database=BlazorSozlukDb;Trusted_Connection=True;TrustServerCertificate=True";
+                optionsBuilder.UseSqlServer(connStr, opt =>
+                {
+                    opt.EnableRetryOnFailure();
+                });
+            }
+        }
         public override int SaveChanges()
         {
             OnBeforeSave();

@@ -24,7 +24,8 @@ namespace BlozorSozluk.Infrastructure.Persistence.EntityConfigurations.Entry
 
             builder.HasOne(i => i.CreatedUser)
                 .WithMany(i => i.EntryFavorites)
-                .HasForeignKey(i => i.CreatedById);
+                .HasForeignKey(i => i.CreatedById)
+                .OnDelete(DeleteBehavior.Restrict); // Herhangi bir silme isleminde nasil calisacagi icin
         }
     }
 }
