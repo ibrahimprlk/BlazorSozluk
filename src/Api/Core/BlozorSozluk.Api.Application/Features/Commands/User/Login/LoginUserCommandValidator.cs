@@ -1,7 +1,7 @@
 ﻿using BlozorSozluk.Common.ViewModels.RequestModels;
 using FluentValidation;
 
-namespace BlozorSozluk.Api.Application.Features.Commands.User
+namespace BlozorSozluk.Api.Application.Features.Commands.User.Login
 {
     public class LoginUserCommandValidator : AbstractValidator<LoginUserCommand> // icerisine verdigimiz bu parametre degeri icin dogrulama yapacagini soyluyoruz
     {
