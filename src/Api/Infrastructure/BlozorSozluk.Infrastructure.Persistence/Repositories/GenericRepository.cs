@@ -199,10 +199,7 @@ namespace BlozorSozluk.Infrastructure.Persistence.Repositories
             return await query.SingleOrDefaultAsync();
 
         }
-        public IQueryable<TEntity> AsQueryable()
-        {
-            throw new NotImplementedException();
-        }
+        public virtual IQueryable<TEntity> AsQueryable() => entity.AsQueryable();
 
         public virtual Task BulkDeleteById(IEnumerable<Guid> ids)
         {

@@ -32,6 +32,11 @@ namespace BlozorSozluk.Api.Application.Mapping
             CreateMap<CreateEntryCommentCommand, EntryComment>()
                 .ReverseMap();
 
+            // Bu ViewModel'de CommentCount alani Entry'de olmadigi icin bu alani otomatik set edemeyeceginden EntryComments altindaki Count bilgisini set etmesi gerektigini soyledik.
+            CreateMap<Entry, GetEntriesViewModel>()
+                .ForMember(x => x.CommentCount, y => y.MapFrom(z => z.EntryComments.Count));
+
+
         }
     }
 }

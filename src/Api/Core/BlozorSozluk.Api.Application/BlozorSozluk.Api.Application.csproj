@@ -22,8 +22,4 @@
     <ProjectReference Include="..\BlozorSozluk.Api.Domain\BlozorSozluk.Api.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Features\Queries\" />
-  </ItemGroup>
-
 </Project>

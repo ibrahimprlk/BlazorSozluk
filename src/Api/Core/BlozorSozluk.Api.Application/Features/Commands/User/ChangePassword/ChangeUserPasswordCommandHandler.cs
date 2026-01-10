@@ -29,7 +29,7 @@ namespace BlozorSozluk.Api.Application.Features.Commands.User.ChangePassword
             if (dbUser.Password != encPass) // Girdigi eski sifre veritabaninda kayitli olan sifresi ile eslesiyor mu?
                 throw new DatabaseValidationException("Old password wrong!");
 
-            dbUser.Password = encPass;
+            dbUser.Password = PasswordEncryptor.Encrpt(request.NewPassword); // Hta firlatilmamissa yeni password hashlenerek db'deki Password alanina kaydediliyor
 
             await userRepository.UpdateAsync(dbUser);
 
