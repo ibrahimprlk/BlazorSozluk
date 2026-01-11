@@ -3,6 +3,7 @@ using BlozorSozluk.Api.Application.Features.Queries.GetEntryComments;
 using BlozorSozluk.Api.Application.Features.Queries.GetEntryDetail;
 using BlozorSozluk.Api.Application.Features.Queries.GetMainPageEntries;
 using BlozorSozluk.Api.Application.Features.Queries.GetUserEntries;
+using BlozorSozluk.Common.ViewModels.Queries;
 using BlozorSozluk.Common.ViewModels.RequestModels;
 using MediatR;
 using Microsoft.AspNetCore.Http;

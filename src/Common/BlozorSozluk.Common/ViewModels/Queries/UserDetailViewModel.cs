@@ -17,3 +17,4 @@ namespace BlozorSozluk.Common.ViewModels.Queries
         public bool EmailConfirmed { get; set; }
 
     }
+}

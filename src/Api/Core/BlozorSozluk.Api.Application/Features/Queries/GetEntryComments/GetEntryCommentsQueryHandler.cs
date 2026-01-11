@@ -4,7 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BlozorSozluk.Api.Application.Interfaces.Repositories;
+using BlozorSozluk.Common.Infrastructure.Extensions;
 using BlozorSozluk.Common.ViewModels.Page;
+using BlozorSozluk.Common.ViewModels.Queries;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 

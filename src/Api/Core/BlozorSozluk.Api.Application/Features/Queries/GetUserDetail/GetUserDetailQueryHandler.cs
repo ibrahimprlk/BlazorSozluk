@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
 using BlozorSozluk.Api.Application.Interfaces.Repositories;
+using BlozorSozluk.Common.ViewModels.Queries;
 using MediatR;
 
 namespace BlozorSozluk.Api.Application.Features.Queries.GetUserDetail

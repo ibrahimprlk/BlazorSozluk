@@ -1,4 +1,5 @@
 ﻿using BlozorSozluk.Common.ViewModels.Page;
+using BlozorSozluk.Common.ViewModels.Queries;
 using MediatR;
 
 namespace BlozorSozluk.Api.Application.Features.Queries.GetEntryComments
